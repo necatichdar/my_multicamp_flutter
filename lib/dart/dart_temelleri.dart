@@ -36,6 +36,17 @@ void main() {
 //Global Fonksiyon
   final globalFonk = getName();
   print(globalFonk); // Necati
+
+// Vehicle Classi Icin:
+  final vehicles = <Vehicle>[
+    Vehicle.car(),
+    Vehicle.motorcycle(),
+  ];
+
+//forEach = Koleksiyondaki her degeri dolasiyor
+  vehicles.forEach((vehicle) {
+    print(vehicle.model);
+  });
 }
 
 //Class Olusturma
@@ -70,4 +81,17 @@ class Meslek {
 
 String getName() {
   return 'Necati';
+}
+
+class Vehicle {
+  Vehicle(this.year, this.model);
+
+  factory Vehicle.car() {
+    return Vehicle(2012, 'Honda C-HR');
+  }
+  factory Vehicle.motorcycle() {
+    return Vehicle(2000, 'Harley Davidson Sportstrer');
+  }
+  final int year;
+  final String model;
 }
