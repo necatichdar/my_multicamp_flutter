@@ -68,10 +68,43 @@ void main() {
   });
 
   print(yearModelMap.runtimeType);
-}
-class Cars{
 
+//set = Ayni verileri otomatik olarak kaldiriyor.
+  final name = "Necati";
+  final setExample = {name, name, name, name};
+  print(setExample.length); //1
+
+// For dongusu
+  final example = <String>['Necati', 'Cuhadar', 'Polati', 'Ankara'];
+  //example'daki her degeri name'e atiyoruz ve islem yapiyoruz.
+  for (final name in example) {
+    print(name);
+  }
+
+  for (var i = 0; i < example.length; i++) {
+    print(example[i]);
+  }
+// 100tane degeri var her birini dondur.
+  final hundred = List.generate(100, (index) => index);
+
+  for (var i = 0; i < hundred.length; i++) {
+    if (hundred[i].isEven) {
+      // Sadece Cift Degerleri Yazar
+      print(hundred[i]);
+    }
+  }
+
+  int index = 0;
+  while (index < hundred.length) {
+    if (hundred[index].isEven) {
+      // Sadece Cift Degerleri Yazar
+      print(hundred[index]);
+    }
+    index++;
+  }
 }
+
+class Cars {}
 
 //Class Olusturma
 class Meslek {
