@@ -47,6 +47,30 @@ void main() {
   vehicles.forEach((vehicle) {
     print(vehicle.model);
   });
+
+//map kullanimi
+//vehicleModels altinda vehicles teki moddeleri bir listye attık. .toList() liste olusturmasini sagladi.
+  final vehicleModels = vehicles.map((vehicle) {
+    return vehicle.model;
+  }).toList();
+
+//Map Example
+  final mapExample = <int, String>{
+    1992: 'August',
+    1991: 'Jaunary',
+  };
+  final necati1 = mapExample[1992];
+  print(necati1);
+
+  final yearModelMap = vehicles.map((vehicle) {
+    // return <int, String>{vehicle.year: vehicle.model};
+    return Cars();
+  });
+
+  print(yearModelMap.runtimeType);
+}
+class Cars{
+
 }
 
 //Class Olusturma
@@ -92,6 +116,7 @@ class Vehicle {
   factory Vehicle.motorcycle() {
     return Vehicle(2000, 'Harley Davidson Sportstrer');
   }
+
   final int year;
   final String model;
 }
