@@ -153,3 +153,12 @@ class Vehicle {
   final int year;
   final String model;
 }
+
+/*
+  Responsive Tasarim
+  Flexible
+  Expanded
+  FittedBox
+  LayoutBuilder
+
+*/
